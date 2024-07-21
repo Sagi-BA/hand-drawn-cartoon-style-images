@@ -4,13 +4,6 @@ aiohttp #This is for telegram
 requests
 gradio_client #for alvdansen-littletinies
 googletrans
-PIL
 langdetect
 deep_translator
 asyncio
-
-
-# gTTS
-
-# logging
-# groq
