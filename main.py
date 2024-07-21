@@ -88,14 +88,15 @@ def set_prompt(prompt):
     st.session_state.state['user_prompt'] = prompt
 
 async def main():
-    header_content, image_path, footer_content = initialize()
-
-    st.markdown(f"<h2 style='text-align: center; color: #FF6347;'>{header_content}</h2>", unsafe_allow_html=True)
+    image_path, footer_content = initialize()
+    
     if image_path:
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             st.image(image_path, use_column_width=True)
-            
+    
+    
+        
     example_prompts = [
         "שקיעה יפהפייה על חוף הים",
         "חתול חמוד משחק עם כדור צמר",
@@ -144,7 +145,7 @@ async def main():
                     print(f"Deleted temporary file: {image_path}")
 
     user_count = get_user_count(formatted=True)
-    footer_with_count = f"{footer_content}\n\n<p class='user-count' style='color: #4B0082;'>Total users: {user_count}</p>"
+    footer_with_count = f"{footer_content}\n\n<p class='user-count' style='color: #4B0082;'>סה\"כ משתמשים: {user_count}</p>"
     st.markdown(footer_with_count, unsafe_allow_html=True)
 
 async def send_telegram_message_and_file(message, file_path):

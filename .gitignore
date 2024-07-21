@@ -5,3 +5,6 @@ examples_images
 # Ignore all __pycache__ directories
 **/__pycache__/
 AI.txt
+realtime-transcription.py
+utils/gradio_client_wrapper.py
+utils/whisper.py

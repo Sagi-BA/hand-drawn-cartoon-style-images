@@ -27,17 +27,6 @@ body {
   margin: 0 auto;
 }
 
-.circular-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.half-hidden {
-  clip-path: inset(0 0 50% 0);
-}
-
 .stApp > header,
 .stApp > footer {
   background-color: var(--header-footer-bg);
@@ -224,6 +213,38 @@ img {
   background-color: #cc0000;
   border-color: #cc0000;
   color: white !important;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+}
+.big-font {
+  font-size: 18px !important;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
+}
+.stTextInput > div > div > input {
+  font-size: 26px !important;
+  line-height: 50px !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
+  box-sizing: border-box !important;
+  padding: 0 0 !important;
+  /* border: 2px solid black; */
+  background-color: #ffbb00;
+}
+.stTextInput > div > div {
+  height: 50px !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
+}
+.mic-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 10px;
 }
 
 @keyframes bounce {
