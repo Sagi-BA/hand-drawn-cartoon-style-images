@@ -19,7 +19,7 @@ Generates hand-drawn cartoon-style images based on text prompts.
 
 ## Watch the video tutorial
 
-![header image](https://i.imgur.com/cf9UOD1.jpeg)
+![header image](https://i.imgur.com/Ds2Vibi.jpg)
 
 ## How it works
 
