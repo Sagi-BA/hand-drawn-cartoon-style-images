@@ -173,19 +173,6 @@ img {
   animation: bounce 1s infinite;
 }
 
-.stTextArea textarea {
-  background-color: #f0f8ff;
-  border: 2px solid #4682b4;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 16px;
-  color: #333;
-  font-family: Arial, sans-serif;
-}
-.stTextArea textarea:focus {
-  border-color: #1e90ff;
-  box-shadow: 0 0 10px #1e90ff;
-}
 .extracted-text-header {
   color: #4682b4;
   font-size: 24px;
@@ -223,6 +210,22 @@ img {
   font-weight: bold;
   /* margin-bottom: 10px; */
 }
+
+.stTextArea textarea {
+  background-color: #f0f8ff;
+  border: 2px solid #4682b4;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 26px;
+  color: #333;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+.stTextArea textarea:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 10px #1e90ff;
+}
+
 .stTextInput > div > div > input {
   font-size: 26px !important;
   line-height: 50px !important;

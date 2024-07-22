@@ -94,8 +94,6 @@ async def main():
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             st.image(image_path, use_column_width=True)
-    
-    
         
     example_prompts = [
         "שקיעה יפהפייה על חוף הים",
@@ -110,7 +108,10 @@ async def main():
     for i, prompt in enumerate(example_prompts):
         cols[i].button(prompt, key=f"example_{i}", on_click=set_prompt, args=(prompt,))
 
-    user_prompt = st.text_input("יש להזין הנחייה ליצירת התמונה:", key="user_prompt", value=st.session_state.state['user_prompt'])
+    user_prompt = st.text_area("יש להזין הנחייה ליצירת התמונה:", key="user_prompt", value=st.session_state.state['user_prompt'])
+    
+    # Add a custom class to the st.text_area
+    # st.markdown('<div class="custom-text-area"></div>', unsafe_allow_html=True)
     
     if st.button("לייצר תמונה") and user_prompt:
         cleanup_image()
