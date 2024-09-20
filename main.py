@@ -87,8 +87,29 @@ def process_result(result):
 def set_prompt(prompt):
     st.session_state.state['user_prompt'] = prompt
 
+def hide_streamlit_header_footer():
+    hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            footer:after {
+                content:'goodbye'; 
+                visibility: visible;
+                display: block;
+                position: relative;
+                #background-color: red;
+                padding: 5px;
+                top: 2px;
+            }
+            header {visibility: hidden;}
+            #root > div:nth-child(1) > div > div > div > div > section > div {padding-top: 0rem;}
+            </style>
+            """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
+
 async def main():
     image_path, footer_content = initialize()
+    hide_streamlit_header_footer()
     
     if image_path:
         col1, col2, col3 = st.columns([1, 2, 1])
